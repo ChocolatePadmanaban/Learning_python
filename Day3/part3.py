@@ -2,11 +2,14 @@
 
 class Student:
     '''student class '''
+    total = 0
     def __init__(self, n,a):
         '''for privacy add __ before variable names'''
         self.__name = n
         self.__age= a
-        print("Hello")
+        self.__class__.total += 1
+        self.__roll = self.__class__.total
+        #print("Hello")
         '''we cannnat access without getters'''
 
     def get_age(self):
@@ -15,6 +18,8 @@ class Student:
         return self.__name
     def inc_age(self,n):
         self.__age += n
+    def get_roll(self):
+        return self.__roll
     
 
 
