@@ -15,3 +15,7 @@ print(stu3.get_name() + "'s age is", stu3.get_age())
 print(stu1.get_name() + "'s roll no is", stu1.get_roll())
 print(stu2.get_name() + "'s roll no is", stu2.get_roll())
 print(stu3.get_name() + "'s roll no is", stu3.get_roll())
+
+print(stu1)
+print(stu1> stu2)
+print(5>7)

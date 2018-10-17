@@ -20,6 +20,7 @@ class Student:
         self.__age += n
     def get_roll(self):
         return self.__roll
-    
-
-
+    def __repr__(self):
+        return "An object of class student"
+    def __gt__(self,other):
+        return self.__age > other.get_age()
