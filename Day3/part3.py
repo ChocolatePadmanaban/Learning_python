@@ -1,4 +1,4 @@
-# Classes
+#defing Classes
 
 class Student:
     '''student class '''
@@ -6,7 +6,15 @@ class Student:
     def __init__(self, n,a):
         '''for privacy add __ before variable names'''
         self.__name = n
-        self.__age= a
+        '''exceptoin is  added with intention'''
+        try:
+            if a<0:
+                raise Exception(a,n)
+            else:
+                self.__age = a
+        except Exception as inst:
+            print('Negative age', inst.args)
+            self.__age= 0
         self.__class__.total += 1
         self.__roll = self.__class__.total
         #print("Hello")
@@ -24,3 +32,4 @@ class Student:
         return "An object of class student"
     def __gt__(self,other):
         return self.__age > other.get_age()
+
