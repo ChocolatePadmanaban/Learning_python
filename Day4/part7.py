@@ -45,3 +45,13 @@ print(next(ge))
 print(next(ge))
 print(next(ge))
 print(next(ge))
+
+# Consume generator to count the most popular beer
+
+beer_counts = {}
+for bd in beerdicts:
+    if bd['Style'] not in beer_counts:
+        beer_counts[bd['Style']]=1
+    else:
+        beer_counts[bd['Style']]+=1
+print(beer_counts)
