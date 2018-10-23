@@ -13,4 +13,6 @@ except:
     print(sys.exc_info()[0])
     raise
 else:
-    res = 6
+    res = 6+val
+    print("res is", res)
+    f.close()
