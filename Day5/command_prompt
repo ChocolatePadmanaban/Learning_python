@@ -1,0 +1,4 @@
+sudo apt-get -f install
+sudo apt-get install mysql-server
+mysql -u root -p 
+(It will ask for password give it and remember it)
