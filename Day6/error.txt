@@ -1,0 +1,2 @@
+cat: hello.py: No such file or directory
+cat: nosuchfile: No such file or directory

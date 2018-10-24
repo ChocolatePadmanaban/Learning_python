@@ -1,0 +1,7 @@
+ls > allout.txt (list of files in the current folder to file allout.txt )
+
+cat hello.py nosuchfile > output.txt
+
+rm output.txt
+
+cat 

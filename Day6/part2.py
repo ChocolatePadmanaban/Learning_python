@@ -1,3 +1,7 @@
+# problem statement: check the values of answers and modle in 
+#their respective csv file and print the score for which the answers match
+
+
 model = open("model.csv")
 answer =open("answers.csv")
 models = [i.split(',') for i in model.readlines()]

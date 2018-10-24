@@ -1,0 +1,11 @@
+allout.txt
+answers.csv
+model.csv
+output.txt
+part1.py
+part2.py
+part3.py
+part4.py
+part5.py
+part6.py
+unix_commands
