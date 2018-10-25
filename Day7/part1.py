@@ -1,6 +1,6 @@
 # problem statement: check the values of answers and modle in 
 #their respective csv file and print the score for which the answers match
-# with special case of negative marking
+# with special case of negative marking -1 for wrong answer
 
 
 model = open("model.csv")
