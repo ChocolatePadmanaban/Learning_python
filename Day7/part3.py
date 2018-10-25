@@ -12,9 +12,11 @@ def NextIPAddress(a):
     increment = 1
     for i in range(3,-1,-1):
         increment , a[i] = NextIP(a[i], increment)
+        if increment == 0: 
+            break
     return ".".join([str(i) for i in a])
 
-print(NextIPAddress("192.233.255.255"))
+print(NextIPAddress("192.255.255.255"))
 
 
 
