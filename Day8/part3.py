@@ -36,3 +36,7 @@ while True:
     finally:
         # Clean up the connection
         connection.close()
+
+
+# from another terminal connect $telnet localhost portno
+# 
