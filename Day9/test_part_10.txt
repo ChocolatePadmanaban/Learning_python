@@ -1,0 +1,11 @@
+::
+
+    >>> import part_10a
+    >>> my_function(2,3)
+    6
+
+::
+
+    >>> import part_10a
+    >>> my_function('a',3)
+    'aaa'
