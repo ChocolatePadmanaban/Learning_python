@@ -9,11 +9,12 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Bind the socket to the port
 server_address = ('localhost', 10001)
-print('starting up on 192.168.43.83, {} port {}'.format(*server_address))
+print('starting up on local host, {} port {}'.format(*server_address))
 sock.bind(server_address)
 
 # Listen for incoming connections
 sock.listen(1)
+
 
 while True:
     # Wait for a connection
@@ -28,7 +29,7 @@ while True:
             print('received {!r}'.format(data))
             if data:
                 print('sending data back to the client')
-                connection.sendall(data)
+                connection.sendall(bytes(data,'utf-8'))
             else:
                 print('no data from', client_address)
                 break
