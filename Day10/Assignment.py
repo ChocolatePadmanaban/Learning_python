@@ -3,11 +3,11 @@
 import socket 
 import sys
 
-# from ftplib import FTP
-# ftp = FTP('ftp.gnu.org')
-# ftp.login()
-# ftp.retrbinary('RETR README', open('README', 'wb').write)
-# ftp.quit()
+from ftplib import FTP
+ftp = FTP('ftp.gnu.org')
+ftp.login()
+ftp.retrbinary('RETR README', open('README', 'wb').write)
+ftp.quit()
 
 #reading the file and getting the lines with the
 
