@@ -1,16 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 
 # Create your views here.
 from django.http import HttpResponse
-import datetime
+# import datetime 
+from datetime import datetime, timezone
 
-def say_hello( name):
+def say_hello(request, name):
     return HttpResponse("Hello " +name)
+
+
 def current_datetime(request):
-    now = datetime.datetime.now()
-    html = """<html><body> It is now%s               
-               </body></html>"""%now
-    return HttpResponse(html)
+    now = datetime.now()
+    return render_to_response("current_datetime.html",
+    {'current_date': now})
 
 def hours_ahead(request, offset):
     offset = int(offset)
