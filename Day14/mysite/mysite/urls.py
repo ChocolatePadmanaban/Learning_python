@@ -23,5 +23,12 @@ urlpatterns = [
     re_path('hello/(\w+)',say_hello),
     re_path('hours/(\d+)',hours_ahead),
     path('time/',current_datetime),
+    path('searchf/',search_form),
+    path('search/',search ),
+    path('form/', GetForm),
+    path('getColor/', getColor),
+    path('setColor/', setColor),
+    path('showColor/',show_color),
+    path('login/',login),
     path('admin/', admin.site.urls),
 ]
