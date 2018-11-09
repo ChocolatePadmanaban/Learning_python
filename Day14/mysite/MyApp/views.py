@@ -33,7 +33,10 @@ def search_form(request):
     return render_to_response("search_from.html")
 
 def search(request):
-    if 'q'in request.GET:
+    print(request.GET)
+    if 'Logout' in request.GET:
+        return render_to_response("loginForm.html")        
+    elif 'q'in request.GET:
         message = request.GET['q']
         checkin = Publisher.objects.filter(name__contains=message)
         if checkin:
@@ -65,8 +68,21 @@ def show_color(request):
     else:
         return HttpResponse("You donot have a favorite color in cookie")
 
-def login(request):
-    if request.method == 'POST':
-        if request.session.test_cookie_worked():
-            request.session.delete_test_cookie()
-            return HttpResponse("You are logged in")
+def getlogin(request):
+    return render_to_response("loginForm.html")
+
+def setlogin(request):
+    filename = open('/home/cisco/Documents/Learning_python/Day14/mysite/MyApp/users.txt')
+    users = filename.readlines()
+    dict1 = {}
+    for i in users:
+        Key, Value = i.strip().split(':')
+        dict1[Key]= Value
+    if request.GET['userName'] in dict1.keys() and request.GET['passWord'] == dict1[request.GET['userName']]:
+        return render_to_response("search_from.html")
+    else:
+        return HttpResponse('You have enter a wrong username or password')
+
+def logout(request):
+    return render_to_response("loginForm.html")
+

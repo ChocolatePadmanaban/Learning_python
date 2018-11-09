@@ -29,6 +29,7 @@ urlpatterns = [
     path('getColor/', getColor),
     path('setColor/', setColor),
     path('showColor/',show_color),
-    path('login/',login),
+    path('login/',getlogin),
+    path('setlogin/',setlogin),
     path('admin/', admin.site.urls),
 ]
