@@ -78,6 +78,7 @@ def setlogin(request):
     for i in users:
         Key, Value = i.strip().split(':')
         dict1[Key]= Value
+
     if request.GET['userName'] in dict1.keys() and request.GET['passWord'] == dict1[request.GET['userName']]:
         return render_to_response("search_from.html")
     else:
@@ -85,4 +86,3 @@ def setlogin(request):
 
 def logout(request):
     return render_to_response("loginForm.html")
-
