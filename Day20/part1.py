@@ -1,15 +1,14 @@
-# Unexpands functions
-
-
+# Unexpands functions()
 def HighestSpace(a):
-    space, i = 2,2
-    while i< 10:
+    i = 10
+    while i>1:
         i-=1
         if i*' ' in a:
             return i
+    return i
 
 def Un_Expand(a):
-    while HighestSpace(a)>= 1:
+    while HighestSpace(a)> 1:
         a = a.replace(HighestSpace(a)*' ',(HighestSpace(a)//2 + (HighestSpace(a)%2))*'\t')
     else:
         return a
