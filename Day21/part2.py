@@ -20,8 +20,8 @@ def GetVaribles(Class_1):
     print(b1)
     gets = []
     for i in  b1:
-        if '_Student__' in i:
-            gets.append(i.replace('_Student__',''))
+        if '_'+a.__class__.__name__+'__' in i:
+            gets.append(i.replace('_'+a.__class__.__name__+'__',''))
     print(gets)
     d1 = {}
     for i in gets:
