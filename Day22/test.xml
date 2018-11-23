@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<AppName>
+    <author>Subho Halder</author>
+    <description> Description</description>
+    <date>2012-11-06</date>
+        <out>Output 1</out>
+        <out>Output 2</out>
+        <out>Output 3</out>
+</AppName>
