@@ -8,8 +8,8 @@ class Student():
         self.Sec= sec
     def getGrade(self):
         return self.__Grade
-def GetVaribles(Class_1):
-    a = Class_1()
+def GetVaribles(a):
+    #a = Class_1()
     c1=  set(['__class__', '__delattr__', '__dict__', '__dir__','__doc__',
      '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__',
       '__init__', '__init_subclass__', '__le__', '__lt__', '__module__',
@@ -27,8 +27,11 @@ def GetVaribles(Class_1):
     for i in gets:
         d1[i]=a.__getattribute__('get'+i)()
     print(d1)
+    d1.update(a.__dict__)
+    print(d1)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" :
     a = Student()
-    GetVaribles(Student)
+    print(a.__dict__)
+    GetVaribles(a)
