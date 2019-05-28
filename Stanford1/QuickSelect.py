@@ -1,15 +1,15 @@
 import random
  
 def partition(vector, left, right, pivotIndex):
-    pivotValue = vector[pivotIndex]
-    vector[pivotIndex], vector[right] = vector[right], vector[pivotIndex]  # Move pivot to end
-    storeIndex = left
-    for i in range(left, right):
-        if vector[i] < pivotValue:
-            vector[storeIndex], vector[i] = vector[i], vector[storeIndex]
-            storeIndex += 1
-    vector[right], vector[storeIndex] = vector[storeIndex], vector[right]  # Move pivot to its final place
-    return storeIndex
+    pivotvalue=vector[pivotIndex]
+    vector[right],vector[pivotIndex]=vector[pivotIndex],vector[right]
+    storedindex=left
+    for i in range(left,right):
+        if vector[i]<pivotvalue:
+            vector[i],vector[storedindex]=vector[storedindex],vector[i]
+            storedindex+=1
+    vector[right],vector[storedindex]=vector[storedindex],vector[right]
+    return storedindex
  
 def _select(vector, left, right, k):
     "Returns the k-th smallest, (k >= 0), element of vector within vector[left:right+1] inclusive."

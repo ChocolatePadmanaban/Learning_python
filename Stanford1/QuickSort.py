@@ -5,20 +5,20 @@ def quickSort(alist,first,last):
         quickSort(alist,splitvalue+1,last)
 
 def partition(alist,first,last):
-    pivotvalue=alist[first]
+    temp=alist[first]
     leftmark=first+1
     rightmark=last
     done=False
     while not done:
-        while leftmark<=rightmark and alist[leftmark]<=pivotvalue:
+        while leftmark<=rightmark and alist[leftmark]<=temp:
             leftmark+=1
-        while rightmark>=leftmark and alist[rightmark]>=pivotvalue:
+        while rightmark>=leftmark and alist[rightmark]>=temp:
             rightmark-=1
         if leftmark>rightmark:
             done=True
         else:
             alist[leftmark],alist[rightmark]=alist[rightmark],alist[leftmark]
-    alist[first],alist[rightmark]=alist[rightmark],alist[first]
+    alist[first],alist[rightmark]= alist[rightmark],alist[first]
     return rightmark
 
 if __name__=="__main__":

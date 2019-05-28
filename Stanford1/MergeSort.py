@@ -1,28 +1,29 @@
 def mergeSort(alist):
     if len(alist)>1:
-        mid=len(alist)//2
-        Left=alist[:mid]
-        Right=alist[mid:]
-        mergeSort(Left)
-        mergeSort(Right)
+        midv=len(alist)//2
+        left=alist[:midv]
+        right=alist[midv:]
+
+        mergeSort(left)
+        mergeSort(right)
+
         i=j=k=0
-        while i<len(Left)and j<len(Right):
-            if Left[i]<Right[j]:
-                alist[k]=Left[i]
+        while i<len(left) and j<len(right):
+            if left[i]<right[j]:
+                alist[k]=left[i]
                 i+=1
             else:
-                alist[k]=Right[j]
+                alist[k]=right[j]
                 j+=1
             k+=1
-        while i<len(Left):
-            alist[k]=Left[i]
+        while i<len(left):
+            alist[k]=left[i]
             i+=1
             k+=1
-        while j<len(Right):
-            alist[k]=Right[j]
+        while j<len(right):
+            alist[k]=right[j]
             j+=1
             k+=1
-            
         
 
 
